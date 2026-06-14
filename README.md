@@ -4,6 +4,27 @@ SurakshaNet is an automated AI-powered safety monitoring system designed for con
 
 ---
 
+## 🖼️ Screenshots
+
+> Add your project screenshots below. Place image files inside the `images/` folder and update the paths accordingly.
+
+### Live Detection — Breach Detected (No Helmet)
+<!-- ![Breach Detected](images/breach_detected.png) -->
+
+### Live Detection — Safe (Helmet Detected)
+<!-- ![Safe Detection](images/safe_detection.png) -->
+
+### Streamlit Dashboard — Overview
+<!-- ![Dashboard Overview](images/dashboard_overview.png) -->
+
+### Streamlit Dashboard — Violation Trends
+<!-- ![Violation Trends](images/dashboard_trends.png) -->
+
+### Email Alert Sample
+<!-- ![Email Alert](images/email_alert.png) -->
+
+---
+
 ## 📌 Project Overview
 
 The system continuously monitors a video feed (webcam or uploaded image) and classifies every detected person into one of three categories:
