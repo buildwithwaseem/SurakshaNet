@@ -8,7 +8,7 @@ import numpy as np
 from datetime import datetime
 
 # --- CONFIGURATION & CONSTANTS ---
-FASTAPI_URL = "http://127.0.0.1:8000"
+FASTAPI_URL = "https://surakshanet.onrender.com"
 
 st.set_page_config(
     page_title="SurakshaNet AI Command Center",
