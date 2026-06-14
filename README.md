@@ -5,7 +5,7 @@ SurakshaNet is an automated AI-powered safety monitoring system designed for con
 ---
 
 ## 📌 Project Overview
-![SurakshaNet Control Dashboard Interface]("C:\Users\wasee\OneDrive\Pictures\Screenshots\Dashborad.png")
+![SurakshaNet Control Dashboard Interface]("C:\Users\wasee\OneDrive\Desktop\COLLEGE\PROJECTS\SurakshaNet\images\Dashborad.png")
 The system continuously monitors a video feed (webcam or uploaded image) and classifies every detected person into one of three categories:
 
 | Class    | Meaning                                  |
