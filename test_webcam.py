@@ -21,12 +21,12 @@ def run_live_pipeline():
     frame_count = 0
     cached_results = []
 
-    print("🚀 SurakshaNet Live Tracker Active! Press 'q' to close it.")
+    print("SurakshaNet Live Tracker Active! Press 'q' to close it.")
 
     while cap.isOpened():
         ret, frame = cap.read()
         if not ret:
-            print("❌ The camera feed is not available.")
+            print("ERROR: The camera feed is not available.")
             break
 
         frame_count += 1

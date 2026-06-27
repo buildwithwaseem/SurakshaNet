@@ -30,7 +30,7 @@ class SirenAlert:
             self._engine.setProperty("rate", 165)
         else:
             self._engine = None
-            print("⚠️ pyttsx3 not installed — siren will fall back to console beep.")
+            print("WARNING: pyttsx3 not installed — siren will fall back to console beep.")
 
     def _speak(self):
         if self._engine:
@@ -38,10 +38,10 @@ class SirenAlert:
                 self._engine.say(self.message)
                 self._engine.runAndWait()
             except Exception as e:
-                print(f"❌ TTS error: {e}")
+                print(f"ERROR: TTS error: {e}")
         else:
             # Fallback: terminal bell
-            print("\a🚨 SAFETY ALERT 🚨")
+            print("\aSAFETY ALERT")
 
     def trigger(self, force: bool = False):
         """

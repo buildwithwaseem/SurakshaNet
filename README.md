@@ -1,10 +1,10 @@
-# 🛡️ SurakshaNet — AI Site Safety & PPE Compliance Command Center
+# SurakshaNet — AI Site Safety & PPE Compliance Command Center
 
 SurakshaNet is an automated AI-powered safety monitoring system designed for construction sites. It uses a fine-tuned **YOLOv8-Nano** model to detect Personal Protective Equipment (PPE) compliance in real time, identify safety violations (missing helmets), and automatically alert site supervisors through audio sirens, persistent logs, and email notifications.
 
 ---
 
-## 📌 Project Overview
+## Project Overview
 The system continuously monitors a video feed (webcam or uploaded image) and classifies every detected person into one of three categories:
 
 | Class    | Meaning                                  |
@@ -17,7 +17,7 @@ If a `Head` or `Person` is detected **without** an overlapping `Helmet` bounding
 
 ---
 
-## 🏗️ System Architecture
+## System Architecture
 
 ```
                     ┌─────────────────────┐
@@ -61,7 +61,7 @@ If a `Head` or `Person` is detected **without** an overlapping `Helmet` bounding
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
 ```
 SurakshaNet/
@@ -89,7 +89,7 @@ SurakshaNet/
 
 ---
 
-## ⚙️ Core Components
+## Core Components
 
 ### 1. Detection Engine — `Backend/detector.py`
 - Loads the fine-tuned **YOLOv8-Nano** model exported to **ONNX** format (`best.onnx`) for lightweight, CPU-friendly inference.
@@ -138,14 +138,14 @@ SurakshaNet/
 - Standalone script for real-time webcam-based monitoring.
 - Applies **frame skipping** (processes every 3rd frame) to reduce CPU load by approximately 66%.
 - Draws color-coded bounding boxes:
-  - 🔴 **Red** — Breach (no helmet detected)
-  - 🟢 **Green** — Safe (helmet detected and overlapping)
-  - 🔵 **Cyan** — Equipment (standalone helmet detection)
+  - Red — Breach (no helmet detected)
+  - Green — Safe (helmet detected and overlapping)
+  - Blue — Equipment (standalone helmet detection)
 - Triggers the siren, database logger, and email notifier on every breach frame.
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 - Python 3.9+
@@ -179,7 +179,7 @@ SURAKSHANET_RECIPIENTS=supervisor1@example.com,supervisor2@example.com
 
 ---
 
-## ▶️ Running the Application
+## Running the Application
 
 ### 1. Live Webcam Monitoring
 ```bash
@@ -201,7 +201,7 @@ Dashboard will be available at `http://localhost:8501`.
 
 ---
 
-## 🔌 API Reference
+## API Reference
 
 | Endpoint        | Method | Description                                      |
 |------------------|--------|---------------------------------------------------|
@@ -227,7 +227,7 @@ Dashboard will be available at `http://localhost:8501`.
 
 ---
 
-## 🧠 Model Details
+## Model Details
 
 - **Architecture:** YOLOv8-Nano (fine-tuned on a custom construction site dataset)
 - **Export Format:** ONNX (optimized for CPU inference)
@@ -236,7 +236,7 @@ Dashboard will be available at `http://localhost:8501`.
 
 ---
 
-## 🛣️ Future Roadmap
+## Future Roadmap
 
 - [ ] Multi-camera support for monitoring multiple site zones simultaneously
 - [ ] Role-based dashboard access for site supervisors and administrators
@@ -246,13 +246,13 @@ Dashboard will be available at `http://localhost:8501`.
 
 ---
 
-## 📄 License
+## License
 
 This project was developed as part of an academic sprint project. Licensing terms to be determined by the project owner.
 
 ---
 
-## 🙏 Acknowledgements
+## Acknowledgements
 
 - **YOLOv8** by Ultralytics
 - **ONNX Runtime** for optimized inference

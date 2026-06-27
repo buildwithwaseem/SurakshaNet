@@ -12,7 +12,7 @@ FASTAPI_URL = "https://surakshanet.onrender.com"
 
 st.set_page_config(
     page_title="SurakshaNet AI Command Center",
-    page_icon="🛡️",
+    page_icon="shield",
     layout="wide",
     initial_sidebar_state="expanded"
 )

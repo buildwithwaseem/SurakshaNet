@@ -41,12 +41,12 @@ class EmailNotifier:
 
         self._configured = bool(self.sender_email and self.sender_password and self.recipient_emails[0])
         if not self._configured:
-            print("⚠️ EmailNotifier not configured (missing credentials/recipients). Alerts will be skipped.")
+            print("WARNING: EmailNotifier not configured (missing credentials/recipients). Alerts will be skipped.")
 
     def _send(self, frame, violations: list):
         try:
             msg = EmailMessage()
-            msg["Subject"] = f"🚨 SurakshaNet Alert: {len(violations)} PPE Violation(s) Detected"
+            msg["Subject"] = f"SurakshaNet Alert: {len(violations)} PPE Violation(s) Detected"
             msg["From"] = self.sender_email
             msg["To"] = ", ".join(self.recipient_emails)
 
@@ -73,10 +73,10 @@ class EmailNotifier:
                 server.login(self.sender_email, self.sender_password)
                 server.send_message(msg)
 
-            print(f"📧 Alert email sent to {self.recipient_emails}")
+            print(f"Alert email sent to {self.recipient_emails}")
 
         except Exception as e:
-            print(f"❌ Failed to send alert email: {e}")
+            print(f"ERROR: Failed to send alert email: {e}")
 
     def notify(self, frame, violations: list, force: bool = False):
         """
