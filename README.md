@@ -250,7 +250,7 @@ Dashboard will be available at `http://localhost:8501`.
 
 This project was developed as part of an academic sprint project. Licensing terms to be determined by the project owner.
 
----
+----
 
 ## Acknowledgements
 
