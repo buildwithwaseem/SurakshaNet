@@ -17,7 +17,7 @@ If a `Head` or `Person` is detected **without** an overlapping `Helmet` bounding
 
 ---
 
-
+## System Architecture
 
 ```
                     ┌─────────────────────┐
